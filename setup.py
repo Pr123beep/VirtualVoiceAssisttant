@@ -11,7 +11,7 @@ except KeyboardInterrupt:
 import os
 import logging
 logging.disable(logging.WARNING)
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' # disabling warnings for gpu requirements
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
 import sqlite3
 conn = sqlite3.connect('Data/chats.db')
@@ -23,7 +23,6 @@ cursor.execute(table)
 conn.commit()
 
 try:
-    # importing prebuilt modules
     import pyttsx3
     from keras_preprocessing.sequence import pad_sequences
     import numpy as np
